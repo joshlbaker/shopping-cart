@@ -1,0 +1,27 @@
+{
+  "name": "shopping-cart-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "nodemon": "^1.8.1",
+    "angular": "^1.4.7",
+    "express": "^4.13.3",
+    "angular-route": "^1.4.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshlbaker/shopping-cart.git"
+  },
+  "author": "Josh Baker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshlbaker/shopping-cart/issues"
+  },
+  "homepage": "https://github.com/joshlbaker/shopping-cart#readme"
+}

@@ -11,12 +11,12 @@ angular.module('cart', ['ngRoute'])
 
 .controller('CartCtrl', ['$scope','CommonProp',function($scope,CommonProp) {
     $scope.shopData = [
-		{'item':'Hard Disk','id':'HD','selected':0,'prices':[{'size':'200GB','price':'2000'},{'size':'400GB','price':'4000'}]},
-		{'item':'CPU','id':'CPU','selected':0,'prices':[{'size':'i3','price':'20000'},{'size':'i5','price':'25000'}]},
-		{'item':'Monitor','id':'MON','selected':0,'prices':[{'size':'16\'','price':'3000'},{'size':'19\'','price':'5000'}]},
-		{'item':'Optical Mouse','id':'MOU','selected':0,'prices':[{'size':'Optical','price':'350'},{'size':'Advanced','price':'550'}]},
-		{'item':'RAM','id':'RM','selected':0,'prices':[{'size':'4GB','price':'4000'},{'size':'8GB','price':'8000'}]},
-		{'item':'USB Keyboard','id':'KEY','selected':0,'prices':[{'size':'Standard','price':'2500'},{'size':'Advanced','price':'4500'}]}
+		{'item':'Backpacks','id':'BP','selected':0,'prices':[{'size':'Osprey Atmos 65 AG Pack','price':'259', 'src': 'public/img/bp1.jpeg' },{'size':'Osprey Aether 70 Pack','price':'289', 'src': 'public/img/bp2.jpeg' }]},
+		{'item':'Tents','id':'TNT','selected':0,'prices':[{'size':'MSR Hubba Hubba NX Tent','price':'399', 'src': 'public/img/tent1.jpeg'},{'size':'Marmot Tungsten 3P Tent','price':'249', 'src': 'public/img/tent2.jpeg'}]},
+		{'item':'Hydration','id':'H20','selected':0,'prices':[{'size':'CamelBak Arete 18 Hydration Pack - 70 fl. oz.','price':'50', 'src': 'public/img/h201.jpeg'},{'size':'CamelBak Lobo Hydration Pack - 100 fl. oz.','price':'75', 'src': 'public/img/h202.jpeg'}]},
+		{'item':'Food','id':'FD','selected':0,'prices':[{'size':'AlpineAire Foods Chicken Gumbo - 2 Servings','price':'7', 'src': 'public/img/FD1.jpeg'},{'size':'Fun Pack Foods Smores Kit','price':'10', 'src': 'public/img/FD2.jpeg'}]},
+		{'item':'Jacket','id':'JK','selected':0,'prices':[{'size':'The North Face Sumner Triclimate 3-in-1 Jacket - Mens','price':'350', 'src': 'public/img/JK1.jpeg'},{'size':'The North Face ThermoBall Triclimate 3-in-1 Jacket - Womens','price':'299', 'src': 'public/img/JK2.jpeg'}]},
+		{'item':'Sleeping Bags','id':'SB','selected':0,'prices':[{'size':'The North Face Dolomite 3S Sleeping Bag - Double','price':'179', 'src': 'public/img/SB1.jpeg'},{'size':'Big Agnes Cabin Creek Sleeping Bag - Double','price':'269', 'src': 'public/img/SB2.jpeg'}]}
 	];
 
 if(CommonProp.getItems()!=''){
@@ -52,7 +52,7 @@ $scope.total = function(){
         template: function(elem, attrs) {
             return '<div class="panel-body">\
                     <div class="radio" ng-repeat="i in option">\
-                        <label><input type="radio" ng-model="$parent.selected" ng-value="{{i.price}}"  name="{{name}}">{{i.size}} Rs.{{i.price}}</label>\
+                        <label><div class="content"><input type="radio" ng-model="$parent.selected" ng-value="{{i.price}}"  name="{{name}}">{{i.size}} </br>Price: {{i.price | currency}} <div class="pull-right"><img ng-src="{{i.src}}"/></div></div></label>\
                     </div>\
                 </div>'
         }

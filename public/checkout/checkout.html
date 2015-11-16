@@ -2,7 +2,7 @@
 <div class="container">
     <div class="well">
         <div class="page-header">
-            <h3>Quotation</h3>
+            <h3>Review your order</h3>
         </div>
 
       <table class="table">
@@ -11,7 +11,7 @@
                    {{i.item}}
                </td>
                <td>
-                   Rs. {{i.selected}}
+                   {{i.selected | currency}}
                </td>
            </tr>
 	   <tr>
@@ -19,7 +19,7 @@
                     <b>Total:</b>    
                </td>
                <td>
-                    <b>Rs. {{total}}</b>
+                    <b> {{total | currency}}</b>
                </td>
            </tr>
        </table>
